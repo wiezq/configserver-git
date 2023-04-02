@@ -1,0 +1,25 @@
+server:
+  port: 8888
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+spring:
+  security:
+    user:
+      name: user
+      password: user
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/wiezq/spring-cloud-config-wa-tolls-wiezq
+          search-paths:
+            - 'station*'
+          repos:
+            perf:
+              pattern: '*/perf'
+              uri: https://github.com/wiezq/spring-cloud-config-wa-perf-wiezq
+              search-paths:
+                - 'station*'
+
